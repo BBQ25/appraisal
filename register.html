@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <p>Admins only: add employees and assign roles.</p>
+        <form action="register.php" method="POST">
+            <div class="form-group">
+                <label for="employee_name">Employee Name:</label>
+                <input type="text" id="employee_name" name="employee_name" required>
+            </div>
+            <div class="form-group">
+                <label for="employee_id">Employee ID:</label>
+                <input type="text" id="employee_id" name="employee_id" required>
+            </div>
+            <div class="form-group">
+                <label>Roles:</label><br>
+                <input type="checkbox" id="employee_admin" name="employee_admin" value="1"> <label for="employee_admin">Admin (full access)</label><br>
+                <input type="checkbox" id="employee_cd" name="employee_cd" value="1"> <label for="employee_cd">Campus Director</label><br>
+                <input type="checkbox" id="employee_ao" name="employee_ao" value="1"> <label for="employee_ao">Administrative Officer</label><br>
+                <input type="checkbox" id="employee_hr" name="employee_hr" value="1"> <label for="employee_hr">Human Resource Management Officer</label><br>
+                <input type="checkbox" id="employee_supervisor" name="employee_supervisor" value="1"> <label for="employee_supervisor">Supervisor</label><br>
+            </div>
+            <div class="form-group">
+                <label for="employee_s">Supervisor ID (optional):</label>
+                <input type="text" id="employee_s" name="employee_s">
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="index.html">Login here</a></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
